@@ -23,56 +23,62 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: AppColor.mainBackGround,
-        appBar: AppBar(
-          backgroundColor: AppColor.mainBackGround,
-          titleSpacing: 0,
-          title: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Ariana Denaver",
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black),
-              ),
-              Text(
-                "Feamale, 25 y.o",
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black38),
-              ),
-            ],
-          ),
-          leading: Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Container(
-              child: Row(
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(80.0),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: AppBar(
+              backgroundColor: AppColor.mainBackGround,
+              titleSpacing: 0,
+              title: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://www.freepik.com/free-vector/woman-with-long-dark-hair_395229319.htm#fromView=search&page=1&position=31&uuid=e8e13b7b-1947-43d4-a2ad-5482ac3ea480"),
+                  Text(
+                    "Ariana Denaver",
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black),
+                  ),
+                  Text(
+                    "Feamale, 25 y.o",
+                    style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black38),
                   ),
                 ],
               ),
+              leading: Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            "https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?t=st=1734671006~exp=1734674606~hmac=7de9cc867071215f303a8f146f1c66ad382799f63e0bfacbe8f9f21cf1ac20a1&w=996"),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              actions: [
+                IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.search,
+                      size: 26,
+                    )),
+                IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.notifications,
+                      size: 26,
+                    ))
+              ],
             ),
           ),
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.search,
-                  size: 26,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.notifications,
-                  size: 26,
-                ))
-          ],
         ),
         bottomNavigationBar: Container(
           decoration: BoxDecoration(color: AppColor.whiteColor),
